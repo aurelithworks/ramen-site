@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>麺処</title>
+
+<meta name="description" content="麺処は厳選素材を使用した本格醤油らーめん専門店。毎日丁寧に仕込むスープと自家製麺で一杯を提供します。">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">麺処</div>
+
+    <ul class="nav-links">
+        <li><a href="#about">こだわり</a></li>
+        <li><a href="#menu">お品書き</a></li>
+        <li><a href="#info">店舗情報</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <span class="hero-subtitle">JAPANESE RAMEN</span>
+
+        <h1>麺処</h1>
+
+        <p>一杯に込めた、職人のこだわり。</p>
+
+        <a href="#menu" class="btn">お品書きを見る</a>
+    </div>
+</header>
+
+<main>
+
+<section id="about" class="about">
+    <div class="container about-grid">
+
+        <img src="./images/hero.jpg" alt="特製醤油らーめん" class="about-image">
+
+        <div class="about-text">
+            <h2>こだわり</h2>
+            <p>
+                厳選した国産素材のみを使用し、<br>
+                毎朝丁寧に炊き上げる自家製スープ。<br><br>
+                素材本来の旨味を最大限に引き出し、<br>
+                最後の一滴まで味わえる一杯を追求しています。
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="menu" class="menu">
+    <div class="container">
+
+        <h2>お品書き</h2>
+
+        <div class="menu-grid">
+
+            <article class="menu-card">
+                <img src="./images/hero.jpg" alt="特製醤油らーめん">
+                <div class="card-content">
+                    <h3>特製醤油らーめん</h3>
+                    <span class="price">¥980</span>
+                </div>
+            </article>
+
+            <article class="menu-card">
+                <img src="./images/chashudon.jpg" alt="炙りチャーシュー丼">
+                <div class="card-content">
+                    <h3>炙りチャーシュー丼</h3>
+                    <span class="price">¥450</span>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="info" class="info">
+    <div class="container">
+
+        <h2>店舗情報</h2>
+
+        <div class="info-card">
+
+            <img src="./images/interior.jpg" alt="店内の雰囲気" class="info-image">
+
+            <div class="info-item">
+                <strong>営業時間</strong>
+                <p>11:00〜15:00 / 17:00〜22:00</p>
+            </div>
+
+            <div class="info-item">
+                <strong>住所</strong>
+                <p>〇〇県〇〇市〇〇町1-2-3</p>
+            </div>
+
+            <div class="info-item">
+                <strong>電話番号</strong>
+                <p>000-0000-0000</p>
+            </div>
+
+            <a href="tel:0000000000" class="phone-btn">
+                ご予約・お問い合わせ
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+
+    <div class="sns-links">
+
+        <!-- Instagram -->
+        <a href="#" class="sns instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A4.5 4.5 0 1 1 7.5 13 4.5 4.5 0 0 1 12 8.5zm0 2A2.5 2.5 0 1 0 14.5 13 2.5 2.5 0 0 0 12 10.5zM17.5 6.5a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+            </svg>
+        </a>
+
+        <!-- X（公式アイコンSVG） -->
+        <a href="#" class="sns x" aria-label="X">
+            <svg viewBox="0 0 24 24">
+                <path d="M18.244 2H21.5l-7.5 8.58L22 22h-6.8l-5.3-6.94L3.9 22H.5l8.1-9.3L2 2h6.9l4.7 6.2L18.244 2zm-1.2 18h1.8L7.2 4H5.3l11.744 16z"/>
+            </svg>
+        </a>
+
+    </div>
+
+    <p>© 2026 麺処</p>
+
+</footer>
+
+<script>
+const elements = document.querySelectorAll(".about, .menu, .info");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+}, { threshold: 0.15 });
+
+elements.forEach(el => {
+    el.classList.add("fade-up");
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
