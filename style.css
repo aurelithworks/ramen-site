@@ -36,7 +36,7 @@ body{
 }
 
 .logo{
-    color:white;
+    color:#fff;
     font-weight:600;
 }
 
@@ -44,10 +44,12 @@ body{
     display:flex;
     gap:24px;
     list-style:none;
+    margin:0;
+    padding:0;
 }
 
 .nav-links a{
-    color:white;
+    color:#fff;
     text-decoration:none;
     opacity:.8;
     transition:.3s;
@@ -78,7 +80,7 @@ body{
 
 .hero-content{
     position:relative;
-    color:white;
+    color:#fff;
 }
 
 .hero h1{
@@ -129,10 +131,16 @@ h2{
     border-radius:14px;
 }
 
+.about-text{
+    line-height:2;
+    text-align:left;
+    margin:0;
+}
+
 /* MENU */
 .menu{
     background:#0f0f0f;
-    color:white;
+    color:#fff;
 }
 
 .menu-grid{
@@ -175,11 +183,10 @@ h2{
 .info-card{
     max-width:720px;
     margin:0 auto;
-    background:white;
+    background:#fff;
     padding:40px;
     border-radius:14px;
     box-shadow:0 20px 50px rgba(0,0,0,.08);
-
     display:flex;
     flex-direction:column;
     gap:16px;
@@ -199,9 +206,9 @@ h2{
 /* FOOTER */
 footer{
     background:#111;
-    color:white;
+    color:#fff;
     text-align:center;
-    padding:30px;
+    padding:60px 0;
 }
 
 /* SNS */
@@ -234,16 +241,10 @@ footer{
 .sns-float svg{
     width:20px;
     height:20px;
-    fill:white;
+    fill:#fff;
 }
 
-.about-text{
-    line-height:2;
-    text-align:left;
-    margin:0;
-}
-
-/* ===== CV導線 ===== */
+/* CTA */
 .cta-link{
     display:inline-block;
     margin-top:18px;
@@ -270,32 +271,26 @@ footer{
     margin-bottom:10px;
 }
 
-/* ズレ対策 */
-
-/* ulのデフォルト余白を完全リセット */
-ul{
+/* LIST */
+.content-list{
     list-style:none;
     padding:0;
     margin:20px auto;
+    max-width:520px;
     display:flex;
     flex-direction:column;
     gap:10px;
-
-    /* 中央コンテナ内で自然に見せる */
-    max-width:520px;
 }
 
-/* liの見た目統一 */
-li{
+.content-list li{
     position:relative;
     padding-left:18px;
     font-size:15px;
-    color:#1a1a1a;
     text-align:left;
+    color:#1a1a1a;
 }
 
-/* ドット調整（位置ブレ防止） */
-li::before{
+.content-list li::before{
     content:"";
     position:absolute;
     left:0;
