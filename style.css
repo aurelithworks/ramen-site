@@ -185,7 +185,6 @@ h2{
     gap:16px;
 }
 
-/* もし画像が入る場合の保険 */
 .info-image{
     width:100%;
     height:220px;
@@ -193,7 +192,6 @@ h2{
     border-radius:14px;
 }
 
-/* テキスト整形 */
 .info-card p{
     margin:0;
 }
@@ -207,86 +205,6 @@ footer{
 }
 
 /* SNS */
-.sns-links{
-    display:flex;
-    justify-content:center;
-    gap:16px;
-    margin-bottom:10px;
-}
-
-.sns{
-    width:42px;
-    height:42px;
-    background:#222;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:.3s;
-}
-
-.sns:hover{
-    background:#d4af37;
-    transform:translateY(-3px);
-}
-
-.sns svg{
-    width:20px;
-    height:20px;
-    fill:white;
-}
-
-.sns:hover svg{
-    fill:#111;
-}
-
-/* ANIMATION */
-.fade-up{
-    opacity:0;
-    transform:translateY(20px);
-    transition:.8s;
-}
-
-.fade-up.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .menu-grid{
-        grid-template-columns:1fr;
-    }
-
-    .hero h1{
-        font-size:2.8rem;
-    }
-
-    .navbar{
-        flex-direction:column;
-        height:auto;
-        padding:10px;
-    }
-
-    .info-card{
-        padding:24px;
-    }
-}
-
-#reserve{
-    padding-bottom:60px;
-}
-
-#info{
-    padding-top:60px;
-}
-
-/* ===== 固定SNS ===== */
 .floating-sns{
     position:fixed;
     right:20px;
@@ -323,4 +241,67 @@ footer{
     line-height:2;
     text-align:left;
     margin:0;
+}
+
+/* ===== CV導線 ===== */
+.cta-link{
+    display:inline-block;
+    margin-top:18px;
+    color:#d4af37;
+    text-decoration:none;
+    font-size:14px;
+    border-bottom:1px solid rgba(212,175,55,.4);
+    transition:.3s;
+}
+
+.cta-link:hover{
+    transform:translateX(6px);
+    opacity:.8;
+}
+
+.cta-bottom{
+    margin-top:40px;
+    text-align:center;
+}
+
+.cta-bottom p{
+    font-size:14px;
+    opacity:.8;
+    margin-bottom:10px;
+}
+
+/* ズレ対策 */
+
+/* ulのデフォルト余白を完全リセット */
+ul{
+    list-style:none;
+    padding:0;
+    margin:20px auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    /* 中央コンテナ内で自然に見せる */
+    max-width:520px;
+}
+
+/* liの見た目統一 */
+li{
+    position:relative;
+    padding-left:18px;
+    font-size:15px;
+    color:#1a1a1a;
+    text-align:left;
+}
+
+/* ドット調整（位置ブレ防止） */
+li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0.65em;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#d4af37;
 }
